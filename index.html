@@ -1,7 +1,288 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILLBARR Developments - Land Development & Subdivisions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Lighter background for the body */
+        }
+
+        /* Updated Hero Section Background: Clean Gradient */
+        .hero-background {
+            background-image: linear-gradient(to bottom right, #1d4ed8, #6d28d9); /* Deeper blue to purple gradient */
+        }
+
+        /* About Us Section Background: Subtle Gray */
+        .about-background {
+            background-color: #e2e8f0; /* A light, clean gray */
+        }
+
+        /* Simple background pattern for visual interest (can be used as a tile overlay) */
+        .bg-pattern {
+            background-image: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+                              linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+                              linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+                              linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+            background-size: 60px 60px;
+        }
+        /* Keyframe animations for hero section */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.2s; /* Delay for visual effect */
+            opacity: 0; /* Start hidden */
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+            animation-delay: 0.4s; /* Delay for visual effect */
+            opacity: 0; /* Start hidden */
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg py-4 px-6 md:px-10 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col items-center mb-4 md:mb-0">
+                <!-- Company Logo Placeholder -->
+                <img src="https://i.imgur.com/31K7Ml7.png" alt="WILLBARR Developments Logo" class="h-16 w-16 md:h-20 md:w-20 rounded-full mb-2 object-contain">
+                <a href="#" class="text-3xl font-bold text-blue-700 hover:text-blue-800 transition duration-300 ease-in-out">
+                    WILLBARR Developments
+                </a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Home</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">About Us</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Services</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Projects</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative hero-background text-white py-20 md:py-32 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-10 text-center relative z-10">
+            <!-- Location added here -->
+            <p class="text-xl md:text-2xl font-medium text-blue-200 mb-4 animate-fade-in-up">
+                Maldon, Victoria, Australia
+            </p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Building Tomorrow's Communities, Today.
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-down">
+                Innovative Land Development & Subdivision Solutions.
+            </p>
+            <div class="space-x-4">
+                <a href="#contact" class="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Connect with Us
+                </a>
+                <a href="#projects" class="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    View Our Projects
+                </a>
+            </div>
+        </div>
+        <!-- Simple background pattern for visual interest -->
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 about-background">
+        <div class="container mx-auto px-6 md:px-10 text-center relative z-10">
+            <h2 class="text-4xl font-bold text-blue-700 mb-8">About WILLBARR Developments</h2>
+            <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed bg-white bg-opacity-75 p-6 rounded-lg shadow-lg"> <!-- Added a subtle white background for text readability -->
+                <p class="mb-4">
+                    WILLBARR Developments is a forward-thinking startup specializing in small to medium land development and subdivision projects across Victoria. We transform raw land into thriving residential and commercial communities, focusing on sustainable practices, thoughtful design, and exceptional value.
+                </p>
+                <p>
+                    Our experienced team manages every aspect of the development process, from initial land acquisition and feasibility studies to intricate planning, infrastructure implementation, and final sales. We are committed to creating spaces that enhance quality of life and deliver strong returns for our investors.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-12">Our Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Land Acquisition & Feasibility</h3>
+                    <p class="text-gray-700">
+                        Identifying prime opportunities and conducting thorough due diligence to ensure profitable and sustainable projects.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Master Planning & Design</h3>
+                    <p class="text-gray-700">
+                        Crafting innovative and efficient layouts that maximize land use while creating appealing living and working environments.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Infrastructure & Construction Management</h3>
+                    <p class="text-gray-700">
+                        Overseeing the development of roads, utilities, and public spaces to the highest standards.
+                    </p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Financing & Investor Relations</h3>
+                    <p class="text-gray-700">
+                        Structuring robust financial models and fostering strong relationships with our valued investors.
+                    </p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Sales & Marketing Strategy</h3>
+                    <p class="text-gray-700">
+                        Developing effective strategies to bring our developed properties to market successfully.
+                    </p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Environmental & Regulatory Compliance</h3>
+                    <p class="text-gray-700">
+                        Ensuring all projects adhere to local environmental regulations and planning laws.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-12">Our Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out overflow-hidden">
+                    <img src="https://placehold.co/600x400/BFDBFE/1D4ED8?text=The+Maldon+Estate" alt="The Maldon Estate project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">The Maldon Estate</h3>
+                        <p class="text-gray-700 mb-4">
+                            A premier residential subdivision offering family-friendly lots and modern amenities in Maldon, Victoria.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out overflow-hidden">
+                    <img src="https://placehold.co/600x400/BFDBFE/1D4ED8?text=Willow+Creek+Villas" alt="Willow Creek Villas project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Willow Creek Villas</h3>
+                        <p class="text-gray-700 mb-4">
+                            Exclusive villa development focused on luxury living and natural surroundings.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out overflow-hidden">
+                    <img src="https://placehold.co/600x400/BFDBFE/1D4ED8?text=Central+Business+Hub" alt="Central Business Hub project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Central Business Hub</h3>
+                        <p class="text-gray-700 mb-4">
+                            A strategic commercial land development project designed for business growth.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="#" class="bg-blue-700 text-white hover:bg-blue-800 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    See All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investor Information Section -->
+    <section id="investors" class="py-16 md:py-24 bg-gradient-to-r from-blue-700 to-indigo-800 text-white">
+        <div class="container mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-4xl font-bold mb-8">For Our Valued Investors</h2>
+            <p class="text-xl opacity-90 max-w-4xl mx-auto mb-10">
+                WILLBARR Developments offers compelling investment opportunities in the thriving Australian property market. We focus on strategic land acquisitions and meticulously planned subdivisions that generate significant returns. Partner with us to build a prosperous future.
+            </p>
+            <a href="#contact" class="bg-white text-blue-800 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Explore Investment Opportunities
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-12">Get in Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8">
+                    Have a question or interested in partnering with us? Reach out today!
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                    </div>
+                    <div>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message" class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-700 text-white hover:bg-blue-800 px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+                <div class="mt-12 text-gray-700">
+                    <p class="mb-1">Email: <a href="mailto:info@willbarrdevelopments.com" class="text-blue-600 hover:underline">info@willbarrdevelopments.com</a></p>
+                    <p>Phone: <a href="tel:+61312345678" class="text-blue-600 hover:underline">+61 3 1234 5678</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>&copy; 2025 WILLBARR Developments. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
